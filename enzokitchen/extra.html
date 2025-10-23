@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Page - Ezo Kitchen Sushi & Sake Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: white;
+            background-color: #4B2E2E; /* dark brown background */
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 0;
+            background-color: #4B2E2E;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .nav-bar a:hover {
+            color: #FFD700;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('contactpic1.jpg') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .hero h3 {
+            font-size: 1.5em;
+            margin: 10px 0 0 0;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            font-weight: normal;
+        }
+
+        p {
+            max-width: 700px;
+            margin: 30px auto;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        h2 {
+            margin: 30px 0 20px 0;
+        }
+
+        /* Gallery Section (two rows: 5 top, 3 bottom) */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .gallery img {
+            width: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+        }
+    </style>
+</head>
+<body>
+        <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="extra.html">Extra Page</a>
+    </nav>
+
+

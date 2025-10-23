@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ezo Kitchen Sushi & Sake Bar</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        color: white;
+        background-color: #4B2E2E;
+        text-align: center;
+    }
+
+    /* Navigation Bar */
+    .nav-bar {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px 0;
+        background-color: #4B2E2E;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .nav-bar a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: color 0.2s, transform 0.2s;
+    }
+
+    .nav-bar a:hover {
+        color: #FFD700;
+        transform: scale(1.1);
+    }
+
+    /* Cover / Hero Image with Headings on Top */
+    .hero {
+        background: url('indexpic7.jpg') center/cover no-repeat;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 3em;
+        margin: 0;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .hero h3 {
+        font-size: 1.5em;
+        margin: 10px 0 0 0;
+        font-weight: normal;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    p {
+        max-width: 700px;
+        margin: 30px auto;
+        line-height: 1.6;
+        padding: 0 20px;
+    }
+
+    h2 {
+        margin: 30px 0 20px 0;
+    }
+
+    /* Gallery Section */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin: 40px 0;
+    }
+
+    .gallery img {
+        width: 200px;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+    }
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="nav-bar">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="extra.html">Extra Page</a>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Ezo Kitchen Sushi & Sake Bar</h1>
+    <h3>Three Cultures. One Table. Endless Flavor.</h3>
+</div>
+
+<!-- Main content below hero -->
+<p>
+    Welcome to Ezo Kitchen Sushi & Sake Bar, where the artistry of Japanese sushi meets the vibrant flavors of Southeast Asia. Founded by chefs Michael Chen and Daniel Martinez, Ezo brings together generations of culinary heritage and global experience. Our menu blends the precision and artistry of Japanese sushi, the freshness and balance of Vietnamese cuisine, and the bold, aromatic flavors of Thai cooking.
+</p>
+
+<h2>Join Us for Lunch or Dinner</h2>
+
+<!-- Image Gallery: 5 on top, 3 below -->
+<div class="gallery">
+    <!-- Top row: 5 images -->
+    <img src="indexpic1.jpg" alt="Dish 1">
+    <img src="indexpic2.jpg" alt="Dish 2">
+    <img src="indexpic3.jpg" alt="Dish 3">
+    <img src="indexpic4.jpg" alt="Dish 4">
+    <img src="indexpic5.jpg" alt="Dish 5">
+
+    <!-- Bottom row: 3 images, centered -->
+    <div class="bottom-row">
+        <img src="indexpic6.jpg" alt="Dish 6">
+        <img src="indexpic7.jpg" alt="Dish 7">
+        <img src="indexpic8.jpg" alt="Dish 8">
+    </div>
+</div>
+
+
+</body>
+</html>
