@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Image Table</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 40px auto;
+            text-align: center;
+        }
+        td {
+            padding: 15px;
+            vertical-align: top;
+        }
+        img {
+            width: 220px;
+            height: 160px; /* fixed height to make all uniform */
+            object-fit: cover; /* ensures images stay nicely cropped */
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        .caption {
+            margin-top: 8px;
+            font-size: 15px;
+            color: #333;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>
+                <img src="indexdemo1.jpg" alt="Spicy Tuna Tartare">
+                <div class="caption">Spicy Tuna Tartare</div>
+            </td>
+            <td>
+                <img src="indexdemo2.jpg" alt="Sushi Lunch Set">
+                <div class="caption">Sushi Lunch Set</div>
+            </td>
+            <td>
+                <img src="indexdemo3.jpg" alt="Vietnamese Vermicelli Bowl">
+                <div class="caption">Vietnamese Vermicelli Bowl</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="indexdemo4.jpg" alt="California Roll">
+                <div class="caption">California Roll</div>
+            </td>
+            <td>
+                <img src="indexdemo5.jpg" alt="Dragon Roll">
+                <div class="caption">Dragon Roll</div>
+            </td>
+            <td>
+                <img src="indexdemo6.jpg" alt="Rainbow Roll">
+                <div class="caption">Rainbow Roll</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="indexdemo7.jpg" alt="Grilled Thai Beef Salad (Yum Neua)">
+                <div class="caption">Grilled Thai Beef Salad (Yum Neua)</div>
+            </td>
+            <td>
+                <img src="indexdemo8.jpg" alt="Sashimi Platter">
+                <div class="caption">Sashimi Platter</div>
+            </td>
+            <td>
+                <img src="indexdemo9.jpg" alt="Tempura Udon">
+                <div class="caption">Tempura Udon</div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
