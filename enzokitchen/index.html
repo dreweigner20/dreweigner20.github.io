@@ -38,7 +38,7 @@
         transform: scale(1.1);
     }
 
-    /* Cover / Hero Image with Headings on Top */
+    /* Hero Section */
     .hero {
         background: url('indexpic7.jpg') center/cover no-repeat;
         height: 100vh;
@@ -62,15 +62,24 @@
         text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
 
+    /* Paragraphs */
     p {
-        max-width: 700px;
+        max-width: 600px;
         margin: 30px auto;
         line-height: 1.6;
         padding: 0 20px;
     }
 
+    /* Headings */
     h2 {
         margin: 30px 0 20px 0;
+    }
+
+    /* Horizontal Rule */
+    hr {
+        width: 60%;
+        border: 1px solid #FFFFFF; /* changed to white */
+        margin: 30px auto;
     }
 
     /* Gallery Section */
@@ -93,6 +102,29 @@
         transform: scale(1.05);
         box-shadow: 0 8px 16px rgba(0,0,0,0.7);
     }
+
+    /* Bold Menu Link */
+    .menu-link {
+        color: #fff;
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    /* About Section */
+    .about-section {
+        max-width: 700px;
+        margin: 40px auto;
+        line-height: 1.6;
+        padding: 0 20px;
+    }
+
+    .about-section ul {
+        list-style: none;
+        padding: 0;
+        line-height: 1.6;
+        text-align: center;
+    }
 </style>
 </head>
 <body>
@@ -102,8 +134,8 @@
     <a href="index.html">Home</a>
     <a href="menu.html">Menu</a>
     <a href="about.html">About Us</a>
+    <a href="reservations.html">Reservations</a>
     <a href="contact.html">Contact Us</a>
-    <a href="extra.html">Extra Page</a>
 </nav>
 
 <!-- Hero Section -->
@@ -112,30 +144,46 @@
     <h3>Three Cultures. One Table. Endless Flavor.</h3>
 </div>
 
-<!-- Main content below hero -->
+<br>
+
+<h3>Step inside and savor the flavors of Japan, Vietnam, and Thailand at Ezo Kitchen.</h3>
+
+<hr>
+<!-- Introduction -->
 <p>
     Welcome to Ezo Kitchen Sushi & Sake Bar, where the artistry of Japanese sushi meets the vibrant flavors of Southeast Asia. Founded by chefs Michael Chen and Daniel Martinez, Ezo brings together generations of culinary heritage and global experience. Our menu blends the precision and artistry of Japanese sushi, the freshness and balance of Vietnamese cuisine, and the bold, aromatic flavors of Thai cooking.
 </p>
 
-<h2>Join Us for Lunch or Dinner</h2>
+<!-- Horizontal Rule -->
+<hr>
 
-<!-- Image Gallery: 5 on top, 3 below -->
+<!-- Image Gallery -->
 <div class="gallery">
-    <!-- Top row: 5 images -->
     <img src="indexpic1.jpg" alt="Dish 1">
-    <img src="indexpic2.jpg" alt="Dish 2">
-    <img src="indexpic3.jpg" alt="Dish 3">
-    <img src="indexpic4.jpg" alt="Dish 4">
-    <img src="indexpic5.jpg" alt="Dish 5">
-
-    <!-- Bottom row: 3 images, centered -->
-    <div class="bottom-row">
-        <img src="indexpic6.jpg" alt="Dish 6">
-        <img src="indexpic7.jpg" alt="Dish 7">
-        <img src="indexpic8.jpg" alt="Dish 8">
-    </div>
+    <img src="indexpic8.jpg" alt="Dish 8">
+    <img src="indexpic7.jpg" alt="Dish 7">
 </div>
 
+<!-- Our Promise Section -->
+<div class="about-section">
+    <h2>Our Promise</h2>
+    <p>At Ezo, we care about doing things right. That means:
+Respecting the traditions behind every dish we serve
+Using quality ingredients that let the food speak for itself
+Creating a welcoming space for everyone, from families and couples to curious food lovers
+Representing Asian cultures thoughtfully, with attention and care. For us, Ezo isn’t just a restaurant, it’s a story about connection, culture, and the joy that happens when people come together over food.</p>
+
+<h3>Honoring Three Traditions, Sharing One Vision</h3>
+
+</div>
+
+<hr>
+
+<!-- Bold Menu Link -->
+<p>
+    <a href="menu.html" class="menu-link">Join Us for Lunch or Dinner</a>
+</p>
 
 </body>
 </html>
+
