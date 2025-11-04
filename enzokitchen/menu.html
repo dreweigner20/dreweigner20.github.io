@@ -56,8 +56,8 @@
 
     /* Menu Sections */
     .menu-section {
-      max-width: 800px;
-      margin: 40px auto;
+      max-width: 825px;
+      margin: 30px auto;
       line-height: 1.7;
       padding: 0 20px;
     }
@@ -110,23 +110,94 @@
       transform: scale(1.05);
       box-shadow: 0 6px 15px rgba(0,0,0,0.7);
     }
+}
+
+.header-bar {
+    display: flex;
+    justify-content: center; /* centers the nav bar + logo together */
+    background-color: #4B2E2E;
+    padding: 10px 20px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* smaller gap between logo and first link */
+}
+
+.site-logo {
+    width: 50px; /* small logo */
+    height: auto;
+}
+/* Minimal overlay — add this right after your existing .hero rule */
+.hero { position: relative; } /* harmless if already present */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;                /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(0, 0, 0, 0.45); /* change alpha for darkness */
+    pointer-events: none;    /* overlay won't block clicks */
+    z-index: 0;              /* sits behind hero's text but inside hero */
+}
+
+/* make sure the hero's visible content is above the overlay */
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+.menu-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: #4B2E2E;
+  padding: 12px 0;
+  position: sticky;   /* keeps it visible when scrolling */
+  top: 80px;          /* adjust if you have a logo/header above */
+  z-index: 20;
+}
+
+.menu-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.menu-nav a:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+}
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav-bar">
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="about.html">About Us</a>
-    <a href="reservations.html">Reservations</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
+<!-- Header with logo + nav -->
+<div class="header-bar">
+    <nav class="nav-bar">
+<img src="logo.png" class="site-logo" alt="logo">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About Us</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</div>
 
   <!-- Hero Section -->
   <div class="hero">
     <div class="hero-text">Sushi at Ezo</div>
   </div>
+
+<br>
+<!-- Menu Navigation Bar -->
+<div class="menu-nav">
+  <a href="#sushi-rolls">Sushi Rolls</a>
+  <a href="#drinks">Drinks</a>
+  <a href="#lunch-menu">Lunch Menu</a>
+  <a href="#dinner-menu">Dinner Menu</a>
+</div>
 
   <!-- Intro Paragraph -->
   <div class="menu-section">
@@ -145,96 +216,140 @@
     <img src="menupic4.jpg" alt="Dish 4">
   </div>
 
+
+  <div class="nowrap">
+
   <!-- Sushi Rolls -->
   <div class="menu-section">
-    <h2>Sushi Rolls</h2>
+<h2 id="sushi-rolls">Sushi Rolls</h2>
     <p>Spicy Tuna Roll – Tuna, spicy mayo, and cucumber - 6.50</p>
+<br>
     <p>California Roll – Crab stick, avocado, and cucumber - 5.50</p>
+<br>
     <p>Dragon Roll – Eel, avocado, cucumber, and eel sauce - 9.50</p>
+<br>
     <p>Rainbow Roll – California roll topped with assorte sashimi - 10.50</p>
+<br>
     <p>Tempura Shrimp Roll – Crispy tempura shrimp, avocado, and spicy mayo - 8.50</p>
   </div>
 
   <!-- Gallery 2 -->
   <div class="gallery">
     <img src="menupic5.jpg" alt="Dish 5">
-    <img src="menupic6.jpg" alt="Dish 6">
     <img src="menupic7.jpg" alt="Dish 7">
+    <img src="menupic6.jpg" alt="Dish 6">
   </div>
 
   <!-- Specialty Rolls -->
   <div class="menu-section">
     <h2>Specialty Rolls</h2>
     <p>Ezo Signature Roll – Spicy tuna, avocado, cucumber, topped with seared salmon and miso glaze - 12.50</p>
+<br> 
     <p>Tropical Roll – Shrimp tempura, avocado, topped with mango, and drizzled with a pineapple chili sauce - 11.50</p>
+<br>
     <p>Crispy Volcano Roll – Spicy crab mix and avocado, deep-fried and topped with eel sauce and spicy mayo - 10.50</p>
+ <br>    
     <p>Shiso Garden Roll – Cucumber, avocado, pickled radish, and shiso leaf wrapped in soy paper (vegetarian) - 9.50</p>
   </div>
  
-  <hr>
+ <br>   
+<h3>Our menu goes beyond sushi so explore the full range of Asian cuisine that defines us</h3>
 
-<h3>Our menu goes beyond sushi so explore the full range of Asian cuisine that defines us.</h3>
+  <hr>
   
-  <hr>
+<h2>Happy Hour</h2>
+<p>Join us every weekday from <strong>3 PM – 6 PM</strong> for Happy Hour! Enjoy  a selection of drinks and appetizers at special prices.</p>
 
-  <!-- Gallery 3 -->
-  <div class="gallery">
-    <img src="menupic8.jpg" alt="Dish 8">
-    <img src="menupic9.jpg" alt="Dish 9">
-    <img src="menupic10.jpg" alt="Dish 10">
-  </div>
+<ul style="list-style: none; padding: 0;">
+  <li> Half-price beers - 3.50 </li>
+<br>
+  <li> All craft cocktails - 9.00</li>
+<br>
+  <li> All sake pours - 8.00 </li>
+<br>
+  <li> All Appetizer - 5.00 </li>
+</ul>
+<hr>
 
   <!-- Beyond Sushi Section -->
   <div class="menu-section">
-   
-    <h2>Drinks</h2>
-
-    <h3>Beer</h3>
-    <p>Asahi – Sapporo – Singha – Tsingtao - 5.00</p>
-
-   <br>
-
+  <h2 id="drinks">Drinks</h2>
+<br>
     <h3>Craft Cocktails</h3>
+ 
     <p>Lychee Martini – Vodka, lychee puree, and a splash of lime juice - 11.00</p>
+<br>
     <p>Pandan Gin Fizz – Pandan-infused gin, lime, soda, and egg white for a frothy finish - 12.00</p>
+<br>
     <p>Pineapple Shiso Smash – Fresh pineapple, muddled shiso leaves, rum, and a hint of ginger syrup - 12.00</p>
+<br>
     <p>Tokyo Mule – Vodka, ginger beer, lime, and yuzu - 11.00</p>
 
     <br>
 
+  <!-- Gallery 3 -->
+  <div class="gallery">
+    <img src="menupic8.jpg" alt="Dish 8">
+    <img src="menupic10.jpg" alt="Dish 10">
+    <img src="menupic9.jpg" alt="Dish 9">
+  </div>
+
+    <h3>Beer</h3>
+    
+    <p>Asahi – Sapporo – Singha – Tsingtao - 6.00</p>
+
+   <br>
+<div class="nowrap">
     <h3>Sake Menu</h3>
+    
     <h4>Junmai (Pure Rice Sake)</h4>
-    <p>Hakkaisan Junmai (Niigata) – Crisp and dry with subtle notes of rice and a clean finish - 9.00</p>
+
+    <p>Hakkaisan Junmai (Niigata) – Crisp and dry with subtle notes of 
+    rice and a clean finish - 9.00</p>
+<br>
     <p>Shichida Junmai (Saga) – Full-bodied with rich umami flavor and mild acidity - 10.00</p>
+<br>
     <p>Kikusui Junmai (Niigata) – Light and refreshing with subtle notes of melon and citrus - 9.00</p>
-
+<br>
     <h4>Junmai Ginjo (Premium Pure Rice Sake)</h4>
+
     <p>Dassai 50 Junmai Ginjo (Yamaguchi) – Delicate and fragrant with hints of tropical fruit and peach - 12.00</p>
+<br> 
     <p>Suigei Tokubetsu Junmai Ginjo (Kochi) – Dry and clean, with bright acidity and a hint of grapefruit - 11.00</p>
+<br> 
     <p>Tedorigawa Junmai Ginjo "Lady Luck" (Ishikawa) – Bright and refreshing with aromas of white flowers and green apples - 12.00</p>
-
+<br>
     <h4>Daiginjo (Super Premium Sake)</h4>
-    <p>Kubota Manju Daiginjo (Niigata) – Elegant and silky with floral aromas and refined sweetness - 16.00</p>
+
+    <p>Kubota Manju Daiginjo (Niigata) – Elegant and silky with floral 
+    aromas and refined sweetness - 16.00</p>
+<br>  
     <p>Katsuyama Ken Daiginjo (Miyagi) – Rich and velvety with fruity notes of ripe pear and melon - 15.00</p>
-    <p>Tatsuriki "Chotokusen" Daiginjo (Hyogo) – Luxurious and complex with subtle notes of lychee and pear - 16.00</p>
-
+<br>  
+    <p>Tatsuriki "Chotokusen" Daiginjo (Hyogo) – Luxurious and complex 
+    with subtle notes of lychee and pear - 16.00</p>
+<br>
     <h4>Nigori (Unfiltered Sake)</h4>
-    <p>Hakutsuru Sayuri Nigori (Hyogo) – Creamy and sweet with notes of coconut and vanilla - 8.00</p>
-    <p>Shiro Sasa Nigori (Akita) – Thick and rich with bold sweetness and a hint of banana - 9.00</p>
 
+    <p>Hakutsuru Sayuri Nigori (Hyogo) – Creamy and sweet with notes of coconut and vanilla - 8.00</p>
+<br> 
+    <p>Shiro Sasa Nigori (Akita) – Thick and rich with bold sweetness and a hint of banana - 9.00</p>
+<br>
     <h4>Sparkling Sake</h4>
     <p>Dassai Sparkling 50 (Yamaguchi) – Effervescent and refreshing with crisp finish and fruity notes - 14.00</p>
+ <br>
     <p>Mio Sparkling Sake (Hyogo) – Lightly sparkling with sweet and fruity profile - 12.00</p>
-
+<br>
     <h4>Specialty Sake</h4>
     <p>Eikun "The Sleeping Beauty" Junmai Daiginjo (Kyoto) – Delicate floral aroma and soft, silky texture - 14.00</p>
+<br>  
     <p>Isojiman Tokubetsu Junmai (Shizuoka) – Fresh and crisp with mineral-driven finish - 12.00</p>
   </div>
 
   <!-- Lunch Gallery -->
 <hr>
 <div class="menu-section">
-  <h2>Lunch Menu</h2>
+<h2 id="lunch-menu">Lunch Menu</h2>
   <p><strong>Lunch 12 PM – 4 PM</strong></p>
 </div>
 
@@ -245,13 +360,20 @@
     <img src="menupic13.jpg" alt="Dish 13">
   </div>
 
+  <div class="nowrap">
+
   <!-- Appetizers -->
   <div class="menu-section">
     <h3>Appetizers</h3>
+   
     <p>Miso Soup – Traditional miso broth with tofu, seaweed, and scallions - 2.50</p>
+<br>
     <p>Edamame – Steamed soybeans with sea salt - 4.00</p>
+<br>  
     <p>Vietnamese Summer Rolls – Shrimp, vermicelli, lettuce, and herbs wrapped in rice paper, served with peanut hoisin dipping sauce - 5.50</p>
+<br>  
     <p>Spicy Tuna Tartare – Diced spicy tuna, avocado, cucumber, and crispy wontons - 7.50</p>
+<br>   
     <p>Thai Chicken Satay – Grilled marinated chicken skewers served with peanut dipping sauce - 6.50</p>
   </div>
 
@@ -265,17 +387,22 @@
   <!-- Lunch Bowls -->
   <div class="menu-section">
     <h3>Lunch Bowls </h3>
+ 
     <p>Sushi Lunch Set – 5 pieces of nigiri (chef's choice) and a California roll, served with miso soup - 12.00</p>
+<br>  
     <p>Teriyaki Salmon Bowl – Grilled salmon fillet with teriyaki glaze, served with steamed rice and sautéed vegetables - 11.50</p>
+<br>   
     <p>Poke Bowl – Marinated tuna or salmon, seaweed, avocado, and edamame over sushi rice, topped with sesame and soy sauce - 10.50</p>
+<br>    
     <p>Pad Thai Lunch Bowl – Stir-fried rice noodles with tofu, egg, peanuts, bean sprouts, and tamarind sauce (choice of shrimp, chicken, or tofu) - 9.50</p>
+<br>
     <p>Vietnamese Vermicelli Bowl – Grilled lemongrass chicken or beef, vermicelli noodles, fresh herbs, lettuce, and crushed peanuts with nuoc cham dressing - 10.50</p>
   </div>
 
 <hr>
 <div class="menu-section">
-  <h2>Dinner Menu</h2>
-  <p><strong>Dinner 5 PM – 4 AM</strong></p>
+<h2 id="dinner-menu">Dinner Menu</h2>
+<p><strong>Dinner 5 PM – 4 AM</strong></p>
 </div>
 
 <!-- Dinner Gallery -->
@@ -288,66 +415,87 @@
 <!-- Appetizers -->
 <div class="menu-section">
   <h3>Appetizers</h3>
+
   <p>Tuna Tataki – Lightly seared tuna, served with ponzu sauce and garnished with daikon and scallions - 9.00</p>
+<br>
   <p>Thai Fish Cakes – Deep-fried fish patties with a side of cucumber relish - 6.50</p>
+<br>
   <p>Vietnamese Grilled Pork Skewers – Marinated pork skewers, served with pickled vegetables and dipping sauce - 7.00</p>
+<br>
   <p>Crab Rangoon – Crispy wontons stuffed with crab and cream cheese, served with sweet chili sauce - 6.50</p>
+<br>
   <p>Shiso Tempura Shrimp – Crispy tempura shrimp wrapped in shiso leaves, served with soy dipping sauce - 8.00</p>
 </div>
 
 <!-- Dinner Gallery -->
   <div class="gallery">
     <img src="menupic20.jpg" alt="Dish 20">
-    <img src="menupic21.jpg" alt="Dish 21">
     <img src="menupic22.jpg" alt="Dish 22">
+    <img src="menupic21.jpg" alt="Dish 21">
   </div>
 
 <!-- Salads -->
 <div class="menu-section">
   <h3>Salads</h3>
+
   <p>Seaweed Salad – Fresh seaweed with sesame dressing - 5.50</p>
+<br>
   <p>Papaya Salad (Som Tam) – Shredded green papaya with lime, peanuts, dried shrimp, and chili - 7.50</p>
+<br>
   <p>House Salad – Mixed greens, cucumber, carrot, and daikon, with a sesame-ginger dressing - 5.00</p>
+<br>
   <p>Grilled Thai Beef Salad (Yum Neua) – Grilled beef slices with fresh herbs, mixed greens, and lime dressing - 9.50</p>
 </div>
 
 <!-- Sushi and Sashimi -->
 <div class="menu-section">
+ 
   <h3>Sushi and Sashimi</h3>
+
   <p>Chef's Choice Sushi Platter – Selection of the freshest nigiri (10 pieces) and a tuna roll - 17.00</p>
+<br>
   <p>Sashimi Platter – 12 pieces of assorted sashimi, served with wasabi and soy sauce - 16.00</p>
 </div>
 
 <!-- Dinner Gallery -->
   <div class="gallery">
-    <img src="menupic23.jpg" alt="Dish 23">
     <img src="menupic24.jpg" alt="Dish 24">
+    <img src="menupic23.jpg" alt="Dish 23">
     <img src="menupic25.jpg" alt="Dish 25">
   </div>
 
 <!-- Entrées -->
 <div class="menu-section">
   <h3>Entrées</h3>
+ 
   <p>Grilled Miso Black Cod – Marinated black cod fillet grilled to perfection, served with steamed rice and sautéed bok choy - 19.00</p>
+<br>
   <p>Pho with Wagyu Beef – Traditional Vietnamese pho broth with thin slices of wagyu beef, rice noodles, fresh herbs, and lime - 15.50</p>
+<br> 
   <p>Thai Green Curry – Creamy coconut curry with chicken, bamboo shoots, bell peppers, and Thai basil, served with jasmine rice - 14.00</p>
+<br>
   <p>Tempura Udon – Thick udon noodles in a light dashi broth, served with shrimp tempura and scallions - 12.50</p>
+<br>
   <p>Crispy Peking Duck – Slow-roasted duck, served with pancakes, hoisin sauce, and scallions - 18.00</p>
 </div>
 
 <!-- Dinner Gallery -->
   <div class="gallery">
-    <img src="menupic26.jpg" alt="Dish 26">
     <img src="menupic27.jpg" alt="Dish 27">
+    <img src="menupic26.jpg" alt="Dish 26">
     <img src="menupic28.jpg" alt="Dish 28">
   </div>
 
 <!-- Desserts -->
 <div class="menu-section">
   <h3>Desserts</h3>
+
   <p>Mochi Ice Cream – Chewy rice cakes filled with mango, green tea, or strawberry ice cream - 5.00</p>
+<br>
   <p>Coconut Sticky Rice with Mango – Sweet sticky rice served with ripe mango and coconut sauce drizzle - 6.00</p>
+<br>
   <p>Matcha Cheesecake – Creamy green tea cheesecake with a crispy cookie crust - 6.50</p>
+<br>
   <p>Lychee Sorbet – Light and refreshing lychee sorbet with fresh mint - 4.50</p>
 </div>
 <hr>

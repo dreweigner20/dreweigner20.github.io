@@ -57,68 +57,117 @@
         .reservation-details, .large-parties, .walk-ins, .experience {
             margin-top: 24px;
         }
+/* Generic horizontal rules */
+hr {
+    border: 1px solid white;
+    margin: 20px auto;
+    width: 50%;
+}
 
-        hr {
-            border: 1px solid white;
-            margin: 20px auto;
-            width: 50%;
-        }
+/* Shorter third horizontal rule */
+hr.short-hr {
+    width: 100px;         /* adjust length as needed */
+    border: 1px solid white;
+    margin: 20px auto;    /* centers it horizontally */
+    <hr class="short-hr">
+}
 
-        a {
-            color: white;
-        }
+/* Links */
+a {
+    color: white;
+}
 
-        a:hover {
-            color: #FFD700;
-        }
+a:hover {
+    color: #FFD700;
+}
+}
+
+.header-bar {
+    display: flex;
+    justify-content: center; /* centers the nav bar + logo together */
+    background-color: #4B2E2E;
+    padding: 10px 20px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* smaller gap between logo and first link */
+}
+
+.site-logo {
+    width: 50px; /* small logo */
+    height: auto;
+}
+
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+<!-- Header with logo + nav -->
+<div class="header-bar">
     <nav class="nav-bar">
+<img src="logo.png" class="site-logo" alt="logo">
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
         <a href="about.html">About Us</a>
         <a href="reservations.html">Reservations</a>
         <a href="contact.html">Contact Us</a>
     </nav>
+</div>
 
     <h1>Reservations</h1>
+
+    <hr>
+
+    <h4>Book Your Table at Ezo Kitchen Sushi & Sake Bar</h4>
+
+    <p>We’re excited to welcome you to <strong>Ezo</strong>, where the art of Japanese sushi meets vibrant flavors of Vietnamese and Thai cuisine all in one</p>
+
+    <p>beautiful, welcoming space. Whether you’re planning a cozy dinner for two, a family night out, or a special celebration,</p>
+
+    <p>we recommend reserving your table in advance to make sure we have the perfect spot ready for you.</p>
     
-    <p>Book Your Table at Ezo Kitchen Sushi & Sake Bar</p>
-    
-    <p>We’re excited to welcome you to <strong>Ezo</strong>, where the art of Japanese sushi meets vibrant flavors of Vietnamese and Thai cuisine all in one beautiful, welcoming space.</p>
-    
-    <p>Whether you’re planning a cozy dinner for two, a family night out, or a special celebration, we recommend reserving your table in advance to make sure we have the perfect spot ready for you.</p>
-    
-    <p><a href="reservation-form.html" class="reserve-link">Reserve Online</a></p>
+    <hr>
     
     <div class="reservation-details">
         <h2>Reservation Details</h2>
         <p><strong>Hours</strong><br>
+<br>
         Monday – Thursday: 12:00 AM – 4:00 AM<br>
+<br>
         Friday – Saturday: 12:00 AM – 4:00 AM<br>
+<br>
+
         Sunday: 12:00 PM – 12:00 PM</p>
-        
+  <br>
+      
         <p><strong>Prefer to Call?</strong><br>
+<br>
         Reach us directly at <a href="tel:5551234567">(555) 123-4567</a> and we’ll be happy to assist.</p>
     </div>
     
     <div class="large-parties">
         <h2>Large Parties & Events</h2>
-        <p>Planning something special? We love hosting birthdays, anniversaries, and private gatherings. For groups of <strong>6 or more</strong>, please call or email us at <a href="mailto:events@ezo.kitchen">events@ezo.kitchen</a> so we can help you create the perfect experience.</p>
+        <p>Planning something special? We love hosting birthdays, anniversaries, and private gatherings. 
+     <br>   
+        <P>For groups of <strong>6 or more</strong>, please call or email us at <a href="mailto:events@ezo.kitchen">events@ezo.kitchen</a> so we can help you create the perfect experience.</p>
     </div>
-    
+    <br>
     <div class="walk-ins">
         <h2>We Do Accept Walk-Ins</h2>
-        <p>While reservations are encouraged, we do accept walk-ins. Stop by anytime, we’ll do our best to seat you as soon as possible.</p>
+        <p>While reservations are encouraged, we do accept walk-ins. 
+         <p>Stop by anytime, we’ll do our best to seat you as soon as possible.</p>
     </div>
-    
+    <br>
     <div class="experience">
         <h2>Experience a Taste of Three Different Cultures</h2>
-        <p>At Ezo, every meal is a journey through <strong>Japan, Vietnam, and Thailand.</strong> Crafted with care, respect, and a shared love for good food and good company. We can’t wait to serve you.</p>
+        <p>At Ezo, every meal is a journey through <strong>Japan, Vietnam, and Thailand.</strong> 
+            <p>Crafted with care, respect, and a shared love for good food and good company. We can’t wait to serve you.</p>
     </div>
+<br>
+
+    <p><a href="reservation-form.html" class="reserve-link">Reserve Online</a></p>
 
 </body>
 </html>
